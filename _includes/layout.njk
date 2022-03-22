@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>{{ title }} &middot; Tabliss</title>
+    <link href="https://unpkg.com/sanitize.css" rel="stylesheet" />
+    <link
+      href="https://unpkg.com/sanitize.css/typography.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          {% for page in search.pages("nav") %}
+          <li>
+            <a href="{{ page.data.url }}">{{ page.data.title }}</a>
+          </li>
+          {% endfor %}
+        </ul>
+      </nav>
+    </header>
+    {{ content | safe }}
+    <footer>
+      <p>&copy; 2022 <a href="{{ "~/privacy.md" | url }}">Privacy</a></p>
+    </footer>
+  </body>
+</html>

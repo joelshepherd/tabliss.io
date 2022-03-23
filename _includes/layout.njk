@@ -3,15 +3,22 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="A beautiful, customisable New Tab page for Firefox and Chrome."
+    />
     <title>{{ title }} &middot; Tabliss</title>
     <link href="https://unpkg.com/sanitize.css" rel="stylesheet" />
     <link
       href="https://unpkg.com/sanitize.css/typography.css"
       rel="stylesheet"
     />
+    <link href="/style.css" rel="stylesheet" />
   </head>
   <body>
     <header>
+      <img src="/logo.svg" class="logo" inline />
       <nav>
         <ul>
           {% for page in search.pages("nav") %}
@@ -22,9 +29,16 @@
         </ul>
       </nav>
     </header>
-    {{ content | safe }}
+    <section>
+      {{ content | safe }}
+    </section>
     <footer>
-      <p>&copy; 2022 <a href="{{ "~/privacy.md" | url }}">Privacy</a></p>
+      <p>
+        <a href="https://twitter.com/tabliss">Twitter</a> &middot;
+        <a href="https://github.com/joelshepherd/tabliss">GitHub</a> &middot;
+        <a href="{{ '~/privacy.md' | url }}">Privacy</a>
+      </p>
+      <p>&copy; 2022</p>
     </footer>
   </body>
 </html>

@@ -6,6 +6,7 @@ const site = lume({ prettyUrls: false });
 site.use(inline());
 
 site.copy("logo.svg");
+site.copy("screenshot.png");
 site.copy("style.css");
 
 export default site;

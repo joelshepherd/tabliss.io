@@ -1,10 +1,23 @@
 :root {
+  --background: #fff;
+  --border: #eee;
   --primary: #3498db;
   --text: #222;
-  --grey: #ecf0f1;
+  --title: #000;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #222;
+    --border: #333;
+    --text: #eee;
+    --title: #fff;
+  }
 }
 
 html {
+  background-color: var(--background);
+  color: var(--text);
   font-size: 15px;
 }
 
@@ -19,13 +32,13 @@ footer {
 }
 
 header {
-  border-bottom: 1px solid var(--grey);
+  border-bottom: 1px solid var(--border);
   display: grid;
   grid-gap: 40px;
   justify-items: center;
 }
 
-svg.logo {
+.logo {
   fill: var(--primary);
   height: 60px;
   width: auto;
@@ -46,13 +59,30 @@ nav li {
 }
 
 nav a {
-  color: inherit;
+  color: var(--title);
   text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
 }
 
 section {
   margin: 0 auto;
   max-width: 750px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.screenshot {
+  margin: 10px 0;
+}
+
+h1 {
+  color: var(--title);
 }
 
 h2 {
@@ -65,31 +95,23 @@ h3 {
   font-weight: 400;
 }
 
-p,
-ol,
-li {
-  color: var(--text);
-}
-
-p.lead {
+.lead {
+  color: var(--title);
   font-size: 18px;
 }
 
-a.button {
+.button {
   background: var(--primary);
   border-radius: 25px;
   color: white;
   display: inline-block;
-  padding: 10px 20px;
+  font-weight: 500;
+  margin: 5px;
+  padding: 5px 20px;
   text-decoration: none;
 }
 
-a.button.lead {
-  font-size: 18px;
-  font-weight: 600;
-}
-
 footer {
-  border-top: 1px solid var(--grey);
+  border-top: 1px solid var(--border);
   text-align: center;
 }

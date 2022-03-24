@@ -8,6 +8,7 @@
       name="description"
       content="A beautiful, customisable New Tab page for Firefox and Chrome."
     />
+    <meta property="og:image" content="/img/share.jpg" />
     <title>{{ title }} &middot; Tabliss</title>
     <link href="https://unpkg.com/sanitize.css" rel="stylesheet" />
     <link
@@ -15,10 +16,11 @@
       rel="stylesheet"
     />
     <link href="/style.css" rel="stylesheet" />
+    <link href="/img/favicon.png" rel="shortcut icon" />
   </head>
   <body>
     <header>
-      <img src="/logo.svg" class="logo" inline />
+      <img src="/img/logo.svg" class="logo" inline />
       <nav>
         <ul>
           {% for page in search.pages("nav") %}

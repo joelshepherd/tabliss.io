@@ -1,0 +1,17 @@
+name: Push
+on: push
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: denoland/setup-deno@v1
+        with:
+          deno-version: 1.x
+      - run: deno run -A https://deno.land/x/lume/ci.ts
+      - uses: actions/upload-artifact@v3
+        with:
+          name: tabliss.io
+          path: _site

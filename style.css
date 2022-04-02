@@ -8,8 +8,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #222;
-    --border: #333;
+    --background: #111;
+    --border: #222;
     --text: #eee;
     --title: #fff;
   }
@@ -79,7 +79,8 @@ img {
 }
 
 .screenshot {
-  margin: 10px 0;
+  max-width: calc(100% + 40px);
+  margin: 10px -20px;
 }
 
 h2 {

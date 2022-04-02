@@ -5,19 +5,27 @@ tags: nav
 
 # Support
 
+## My widgets have disappeared
+
+Widgets can be toggled on and off using the "eye" icon in the top left corner of
+the screen, next to the settings cog. Widgets can also be toggled with the "W"
+keyboard shortcut.
+
 ## Tabliss displays a Storage Error
 
 Tabliss is unable to load or save settings. This is most commonly caused by
 private browsing mode; but permissions, disk space, or a corrupt browser profile
 can also cause issues.
 
-- Check you are not in private or incognito browsing mode
-  - This is most important when using the web version of Tabliss
+- **Check you are not in private or incognito browsing mode**
+  - This is important when using the web version of Tabliss
   - This includes permanent private modes like Firefox's "Never remember
     history" settings
-- Check you have disk space available on your device
+- **Check you have plenty of disk space available on your device**
   - Browsers can, and will, delete browser storage if your disk space is low
-- Check your browser profile is not corrupt
+  - Choosing the "Persist Setting" option in the settings menu will ask the
+    browser not to clear your settings, even when disk space is low
+- **Check your browser profile is not corrupt**
   - On Firefox, you can use the
     "[Refresh Firefox](https://support.mozilla.org/en-US/kb/refresh-firefox-reset-add-ons-and-settings)"
     option to reset
@@ -37,7 +45,7 @@ with the same steps.
 Yes you can! Follow the steps below:
 
 1. Find your favourite Google Font
-1. Press "Select this font" and open the embed popup at the bottom
+1. Press "Select this font" and open the embed pop-up at the bottom
 1. Under Embed Fonts, copy the `@import` embed line (not the `<style>` lines,
    just the `@import` line!)
 1. In Tabliss, add the "Custom CSS" widget and paste the embed line in the text

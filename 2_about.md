@@ -18,7 +18,7 @@ extensions like Momentum.
 - Translations for over 40 languages
 - Private, secure, and requires no permissions
 - Settings sync between your devices
-- 100% free and open source
+- 100% free and no ads
 
 ### Backgrounds
 

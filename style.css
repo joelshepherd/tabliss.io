@@ -1,7 +1,7 @@
 :root {
   --background: #fff;
   --border: #eee;
-  --primary: #3498db;
+  --accent: 52, 152, 219;
   --text: #222;
   --title: #000;
 }
@@ -23,7 +23,7 @@ html {
 }
 
 a {
-  color: var(--primary);
+  color: rgba(var(--accent));
 }
 
 header,
@@ -40,9 +40,19 @@ header {
 }
 
 .logo {
-  fill: var(--primary);
+  fill: rgba(var(--accent));
   height: 60px;
   width: auto;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
 }
 
 nav {
@@ -105,14 +115,28 @@ h3,
 }
 
 .button {
-  background: var(--primary);
+  background: rgb(var(--accent));
   border-radius: 25px;
   color: white;
   display: inline-block;
   font-weight: 500;
+  line-height: 1;
   margin: 5px;
-  padding: 5px 20px;
+  padding: 10px 20px;
   text-decoration: none;
+}
+
+.button:hover {
+  background: rgba(var(--accent), 0.8);
+}
+
+.button-link {
+  background: transparent;
+  color: var(--primary);
+}
+
+.button-link:hover {
+  background: var(--border);
 }
 
 footer {

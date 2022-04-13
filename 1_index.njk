@@ -5,13 +5,41 @@ tags: nav
 
 <div style="text-align: center">
   <p class="lead">
-    A beautiful, customisable New Tab page for Firefox and Chrome.
+    A beautiful and customisable New Tab page for Firefox, Chrome, and Edge.
     <br />
-    <strong>100%</strong> free and open source.
+    <strong>100% free.</strong> No subscriptions. No ads.
   </p>
+
   <p class="lead">
-    <a class="button" href="https://web.tabliss.io/" target="_blank">
-      Try the web version
+    <a
+      class="button firefox"
+      href="https://addons.mozilla.org/addon/tabliss?utm_source=tabliss.io&utm_medium=website"
+    >
+      <svg class="icon"><use href="/img/icon.svg#plus-square" /></svg>
+      Add to Firefox
+    </a>
+    <a
+      class="button chrome"
+      href="https://chrome.google.com/webstore/detail/hipekcciheckooncpjeljhnekcoolahp"
+    >
+      <svg class="icon"><use href="/img/icon.svg#plus-square" /></svg> Add to
+      Chrome
+    </a>
+    <a
+      class="button edge"
+      href="https://chrome.google.com/webstore/detail/hipekcciheckooncpjeljhnekcoolahp"
+    >
+      Add to Edge <small>via Chrome Web Store</small>
+    </a>
+  </p>
+
+  <p style="margin-top: -20px">
+    <a
+      class="button button-link"
+      href="https://web.tabliss.io/"
+      target="_blank"
+    >
+      Try web version
     </a>
   </p>
 
@@ -23,19 +51,18 @@ tags: nav
     width="1280"
   />
 
-  <p>
-    <a
-      class="button lead"
-      href="https://addons.mozilla.org/addon/tabliss?utm_source=tabliss.io&utm_medium=website"
-    >
-      Get Tabliss for Firefox
-    </a>
-
-    <a
-      class="button lead"
-      href="https://chrome.google.com/webstore/detail/hipekcciheckooncpjeljhnekcoolahp"
-    >
-      Get Tabliss for Chrome
-    </a>
-  </p>
+  <p>Greets over <strong>100,000</strong> users every day.</p>
 </div>
+
+<script>
+  if (navigator.userAgent.includes("Firefox")) {
+    document.querySelector(".chrome").style.display = "none";
+    document.querySelector(".edge").style.display = "none";
+  } else if (navigator.userAgent.includes("Edge")) {
+    document.querySelector(".firefox").style.display = "none";
+    document.querySelector(".chrome").style.display = "none";
+  } else {
+    document.querySelector(".firefox").style.display = "none";
+    document.querySelector(".edge").style.display = "none";
+  }
+</script>

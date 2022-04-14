@@ -86,7 +86,7 @@ section {
 section.splash {
   display: grid;
   grid-gap: 40px;
-  grid-template-columns: repeat(auto-fit, minmax(400px, auto));
+  grid-template-columns: repeat(auto-fit, minmax(335px, auto));
   align-items: center;
   max-width: 1280px;
 }

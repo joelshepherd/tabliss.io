@@ -83,14 +83,46 @@ section {
   max-width: 750px;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
+section.splash {
+  display: grid;
+  grid-gap: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(400px, auto));
+  align-items: center;
+  max-width: 1280px;
 }
 
-.screenshot {
-  max-width: calc(100% + 40px);
-  margin: 10px -20px;
+.slider {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.frame {
+  background: var(--border);
+  padding: 10px 20%;
+}
+
+.bar {
+  background: var(--background);
+  border-radius: 10px;
+  height: 20px;
+}
+
+.slides {
+  display: flex;
+  overflow-x: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+
+.slides img {
+  flex-shrink: 0;
+  scroll-snap-align: start;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
 }
 
 h2 {

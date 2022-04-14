@@ -8,7 +8,7 @@
       name="description"
       content="A beautiful and customisable New Tab page for Firefox, Chrome, and Edge. 100% free. No subscriptions. No ads."
     />
-    <meta property="og:image" content="/img/share.jpg" />
+    <meta property="og:image" content="/img/share.webp" />
     <title>{{ title }} &middot; Tabliss</title>
     <link href="https://unpkg.com/sanitize.css" rel="stylesheet" />
     <link
@@ -16,7 +16,7 @@
       rel="stylesheet"
     />
     <link href="/style.css" rel="stylesheet" />
-    <link href="/img/favicon.png" rel="shortcut icon" />
+    <link href="/favicon.png" rel="shortcut icon" />
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-8FJ771VH09"
@@ -32,7 +32,7 @@
   </head>
   <body>
     <header>
-      <img src="/img/logo.svg" class="logo" inline />
+      <img src="/logo.svg" class="logo" inline />
       <nav>
         <ul>
           {% for page in search.pages("nav") %}
@@ -43,9 +43,7 @@
         </ul>
       </nav>
     </header>
-    <section>
-      {{ content | safe }}
-    </section>
+    {{ content | safe }}
     <footer>
       <p>
         <a href="https://twitter.com/tabliss">Twitter</a> &middot;

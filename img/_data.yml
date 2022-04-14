@@ -1,0 +1,3 @@
+imagick:
+  format: webp
+  quality: 90

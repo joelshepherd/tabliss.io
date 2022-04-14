@@ -1,11 +1,12 @@
 ---
+layout: page.njk
 title: About
 tags: nav
 ---
 
 # About
 
-<p class="lead">Tabliss is a free web extension for Firefox and Chrome that replaces your New Tab page with a beautiful, customisable experience. A place of bliss throughout your day.</p>
+<p class="lead">Tabliss is a free web extension for Firefox, Chrome, and Edge that replaces your New Tab page with a beautiful, customisable experience. A place of bliss throughout your day.</p>
 
 Tabliss is private, fast, and free. Tabliss is a free alternative to expensive
 extensions like Momentum.

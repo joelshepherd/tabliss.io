@@ -1,4 +1,5 @@
 ---
+layout: page.njk
 title: Support
 tags: nav
 ---

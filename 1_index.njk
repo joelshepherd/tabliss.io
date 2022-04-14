@@ -1,58 +1,73 @@
 ---
+layout: layout.njk
 title: Home
 tags: nav
 ---
 
-<div style="text-align: center">
-  <p class="lead">
-    A beautiful and customisable New Tab page for Firefox, Chrome, and Edge.
-    <br />
-    <strong>100% free.</strong> No subscriptions. No ads.
-  </p>
-
-  <p class="lead">
-    <a
-      class="button firefox"
-      href="https://addons.mozilla.org/addon/tabliss?utm_source=tabliss.io&utm_medium=website"
-    >
-      <svg class="icon"><use href="/img/icon.svg#plus-square" /></svg>
-      Add to Firefox
-    </a>
-    <a
-      class="button chrome"
-      href="https://chrome.google.com/webstore/detail/hipekcciheckooncpjeljhnekcoolahp"
-    >
-      <svg class="icon"><use href="/img/icon.svg#plus-square" /></svg> Add to
-      Chrome
-    </a>
-    <a
-      class="button edge"
-      href="https://chrome.google.com/webstore/detail/hipekcciheckooncpjeljhnekcoolahp"
-    >
-      Add to Edge <small>via Chrome Web Store</small>
-    </a>
-  </p>
-
-  <p style="margin-top: -20px">
-    <a
-      class="button button-link"
-      href="https://web.tabliss.io/"
-      target="_blank"
-    >
-      Try web version
-    </a>
-  </p>
-
-  <img
-    src="/img/screenshot.png"
-    alt="Tabliss Screenshot"
-    class="screenshot"
-    height="800"
-    width="1280"
-  />
-
-  <p>Greets over <strong>100,000</strong> users every day.</p>
-</div>
+<section class="splash">
+  <div class="lead" style="text-align: center">
+    <p>
+      A beautiful and customisable New Tab page<br />for Firefox, Chrome, and
+      Edge.
+    </p>
+    <p><strong>100% free.</strong> No subscriptions. No ads.</p>
+    <p>
+      <a
+        class="install button firefox"
+        href="https://addons.mozilla.org/addon/tabliss?utm_source=tabliss.io&utm_medium=website"
+      >
+        <svg class="icon"><use href="/icon.svg#plus-square" /></svg>
+        Add to Firefox
+      </a>
+      <a
+        class="install button chrome"
+        href="https://chrome.google.com/webstore/detail/hipekcciheckooncpjeljhnekcoolahp"
+      >
+        <svg class="icon"><use href="/icon.svg#plus-square" /></svg>
+        Add to Chrome
+      </a>
+      <a
+        class="install button edge"
+        href="https://chrome.google.com/webstore/detail/hipekcciheckooncpjeljhnekcoolahp"
+      >
+        <svg class="icon"><use href="/icon.svg#plus-square" /></svg>
+        Add to Edge <small>via Chrome Web Store</small>
+      </a>
+      <br />
+      <a
+        class="try button button-link"
+        href="https://web.tabliss.io/"
+        target="_blank"
+        style="font-size: 1rem"
+      >
+        Try web version
+      </a>
+    </p>
+  </div>
+  <div class="slider">
+    <div class="frame"><div class="bar"></div></div>
+    <div class="slides">
+      <img
+        src="/img/ss-1.webp"
+        alt="Tabliss Screenshot #1"
+        height="800"
+        width="1280"
+      />
+      <img
+        src="/img/ss-2.webp"
+        alt="Tabliss Screenshot #2"
+        height="800"
+        width="1280"
+      />
+      <img
+        src="/img/ss-3.webp"
+        alt="Tabliss Screenshot #3"
+        height="800"
+        width="1280"
+      />
+    </div>
+  </div>
+</section>
 
 <script>
   if (navigator.userAgent.includes("Firefox")) {
@@ -65,4 +80,14 @@ tags: nav
     document.querySelector(".firefox").style.display = "none";
     document.querySelector(".edge").style.display = "none";
   }
+</script>
+
+<script>
+  let i = 0;
+  const slides = document.querySelector(".slides");
+  const total = slides.children.length;
+  setInterval(() => {
+    i = (i + 1) % total;
+    slides.scrollTo(i * slides.offsetWidth, 0);
+  }, 3000);
 </script>

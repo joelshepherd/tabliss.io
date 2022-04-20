@@ -32,7 +32,9 @@
   </head>
   <body>
     <header>
-      <img src="/logo.svg" class="logo" inline />
+      <a href="/" title="Return home">
+        <img src="/logo.svg" class="logo" inline />
+      </a>
       <nav>
         <ul>
           {% for page in search.pages("nav") %}
@@ -48,8 +50,10 @@
       <p>
         <a href="https://twitter.com/tabliss">Twitter</a> &middot;
         <a href="https://github.com/joelshepherd/tabliss">GitHub</a> &middot;
-        <a href="{{ '~/privacy.md' | url }}">Privacy</a>
+        <a href="{{ '~/privacy.md' | url }}">Privacy</a> &middot;
+        <a href="{{ '~/3_support.md' | url }}">Support</a>
       </p>
+      <p>Greeting over <strong>100,000</strong> users every day.</p>
       <p>&copy; 2022</p>
     </footer>
   </body>

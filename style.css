@@ -24,6 +24,11 @@ html {
 
 a {
   color: rgba(var(--accent));
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 header,
@@ -33,15 +38,16 @@ footer {
 }
 
 header {
-  border-bottom: 1px solid var(--border);
+  align-items: center;
   display: grid;
-  grid-gap: 40px;
-  justify-items: center;
+  grid-gap: 20px;
+  grid-template-columns: auto auto;
+  justify-content: center;
 }
 
 .logo {
   fill: rgba(var(--accent));
-  height: 60px;
+  height: 50px;
   width: auto;
 }
 
@@ -56,8 +62,8 @@ header {
 }
 
 nav {
-  font-size: 18px;
-  font-weight: 600;
+  font-size: 16px;
+  font-weight: 500;
 }
 
 nav ul {
@@ -70,12 +76,7 @@ nav li {
 }
 
 nav a {
-  color: var(--title);
-  text-decoration: none;
-}
-
-nav a:hover {
-  text-decoration: underline;
+  color: inherit;
 }
 
 section {
@@ -88,7 +89,8 @@ section.splash {
   grid-gap: 40px;
   grid-template-columns: repeat(auto-fit, minmax(335px, auto));
   align-items: center;
-  max-width: 1280px;
+  max-width: 1500px;
+  text-align: center;
 }
 
 .slider {
@@ -155,11 +157,11 @@ h3,
   line-height: 1;
   margin: 5px;
   padding: 10px 20px;
-  text-decoration: none;
 }
 
 .button:hover {
   background: rgba(var(--accent), 0.8);
+  text-decoration: none !important;
 }
 
 .button-link {
@@ -171,7 +173,11 @@ h3,
   background: var(--border);
 }
 
+.feature {
+  margin: 40px 0;
+}
+
 footer {
-  border-top: 1px solid var(--border);
   text-align: center;
+  background: var(--border);
 }

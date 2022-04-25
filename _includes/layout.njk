@@ -9,7 +9,13 @@
       content="A beautiful and customisable New Tab page for Firefox, Chrome, and Edge. 100% free. No subscriptions. No ads."
     />
     <meta property="og:image" content="/img/share.webp" />
+    {% if title === 'Home' %}
+    <title>
+      Tabliss &middot; A beautiful New Tab page for Chrome and Firefox
+    </title>
+    {% else %}
     <title>{{ title }} &middot; Tabliss</title>
+    {% endif %}
     <link href="https://unpkg.com/sanitize.css" rel="stylesheet" />
     <link
       href="https://unpkg.com/sanitize.css/typography.css"
@@ -53,7 +59,7 @@
         <a href="{{ '~/privacy.md' | url }}">Privacy</a> &middot;
         <a href="{{ '~/3_support.md' | url }}">Support</a>
       </p>
-      <p>Greeting over <strong>100,000</strong> users every day.</p>
+      <p>Greeting nearly <strong>100,000</strong> users every day.</p>
       <p>&copy; 2022</p>
     </footer>
   </body>

@@ -30,7 +30,7 @@ tags: nav
         href="https://chrome.google.com/webstore/detail/hipekcciheckooncpjeljhnekcoolahp"
       >
         <svg class="icon"><use href="/icon.svg#plus" /></svg>
-        Add to Edge <small>via Chrome Web Store</small>
+        Add to Edge <small>via Chrome Store</small>
       </a>
       <br />
       <a
@@ -132,7 +132,7 @@ tags: nav
   if (navigator.userAgent.includes("Firefox")) {
     document.querySelector(".chrome").style.display = "none";
     document.querySelector(".edge").style.display = "none";
-  } else if (navigator.userAgent.includes("Edge")) {
+  } else if (navigator.userAgent.includes("Edg")) {
     document.querySelector(".firefox").style.display = "none";
     document.querySelector(".chrome").style.display = "none";
   } else {

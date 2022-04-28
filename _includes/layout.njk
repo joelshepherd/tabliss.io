@@ -4,14 +4,18 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {% if lead %}
+    <meta name="description" content="{{ lead }}" />
+    {% else %}
     <meta
       name="description"
       content="A beautiful and customisable New Tab page for Firefox, Chrome, and Edge. 100% free. No subscriptions. No ads."
     />
+    {% endif %}
     <meta property="og:image" content="/img/share.webp" />
     {% if title === 'Home' %}
     <title>
-      Tabliss &middot; A beautiful New Tab page for Chrome and Firefox
+      Tabliss &middot; A beautiful New Tab page for Chrome, Firefox and Edge
     </title>
     {% else %}
     <title>{{ title }} &middot; Tabliss</title>
@@ -43,11 +47,9 @@
       </a>
       <nav>
         <ul>
-          {% for page in search.pages("nav") %}
-          <li>
-            <a href="{{ page.data.url }}">{{ page.data.title }}</a>
-          </li>
-          {% endfor %}
+          <li><a href="{{ '~/index.njk' | url }}">Home</a></li>
+          <li><a href="{{ '~/posts/index.njk' | url }}">Updates</a></li>
+          <li><a href="{{ '~/support.md' | url }}">Support</a></li>
         </ul>
       </nav>
     </header>
@@ -57,7 +59,7 @@
         <a href="https://twitter.com/tabliss">Twitter</a> &middot;
         <a href="https://github.com/joelshepherd/tabliss">GitHub</a> &middot;
         <a href="{{ '~/privacy.md' | url }}">Privacy</a> &middot;
-        <a href="{{ '~/3_support.md' | url }}">Support</a>
+        <a href="{{ '~/support.md' | url }}">Support</a>
       </p>
       <p>Greeting nearly <strong>100,000</strong> users every day.</p>
       <p>&copy; 2022</p>

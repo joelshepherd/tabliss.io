@@ -32,16 +32,15 @@ a:hover {
 }
 
 header,
-section,
 footer {
   padding: 40px 20px;
 }
 
 header {
   align-items: center;
-  display: grid;
-  grid-gap: 20px;
-  grid-template-columns: auto auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
   justify-content: center;
 }
 
@@ -80,8 +79,9 @@ nav a {
 }
 
 section {
-  margin: 0 auto;
+  margin: 40px auto;
   max-width: 750px;
+  padding: 0 20px;
 }
 
 section.splash {
@@ -139,6 +139,10 @@ h3 {
 
 .lead {
   font-size: 18px;
+}
+
+.date {
+  color: var(--border);
 }
 
 h1,

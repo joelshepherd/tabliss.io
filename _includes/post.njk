@@ -1,0 +1,20 @@
+---
+layout: layout.njk
+---
+
+<section>
+  <h1>{{ title }}</h1>
+  {% if lead %}
+  <p class="lead">{{ lead }}</p>
+  {% endif %}
+  {{ content | safe }}
+</section>
+
+<section>
+  <p class="date">
+    {{ date | date('HUMAN_DATE') }}
+  </p>
+  <p>
+    <a href="{{ '~/posts/index.njk' | url }}">&larr; Back to latest updates</a>
+  </p>
+</section>

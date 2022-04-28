@@ -1,0 +1,24 @@
+---
+layout: layout.njk
+title: Updates
+tags: nav
+---
+
+<section>
+  <h1>Latest Updates</h1>
+</section>
+
+{% for page in search.pages("post", "date=desc") %}
+<section>
+  <h2>
+    <a href="{{ page.data.url }}">{{ page.data.title }}</a>
+  </h2>
+  <p>{{ page.data.lead }}</p>
+  <p>
+    <a href="{{ page.data.url }}">Read more &rarr;</a>
+    <span class="date">
+      &middot; {{ page.data.date | date('HUMAN_DATE') }}
+    </span>
+  </p>
+</section>
+{% endfor %}

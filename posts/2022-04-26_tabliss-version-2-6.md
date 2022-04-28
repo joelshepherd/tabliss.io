@@ -3,7 +3,6 @@ title: Tabliss version 2.6
 lead:
   New in Tabliss version 2.6, the ability to pause Unsplash background rotation
   from the dashboard, and automatically pull a website's icon for Quick Links.
-tags: post
 ---
 
 ## Automatic website icons for Quick Links

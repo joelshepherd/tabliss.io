@@ -1,7 +1,6 @@
 ---
 title: Tabliss is now available on Microsoft Edge!
 lead: Tabliss has officially launched on the Microsoft Edge store.
-tags: post
 ---
 
 First-class support has now arrived for Microsoft Edge browser, you no longer

@@ -3,7 +3,6 @@ title: Tabliss version 2.5
 lead:
   Tabliss version 2.5 lands with a new Notepad widget to quickly jot down notes,
   new keyboard shortcuts,  and new customisation options.
-tags: post
 ---
 
 ## New Quick Notes widget

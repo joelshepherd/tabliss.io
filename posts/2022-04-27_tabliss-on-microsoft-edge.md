@@ -1,10 +1,10 @@
 ---
 title: Tabliss is now available on Microsoft Edge!
-lead: Tabliss has officially launched on the Microsoft Edge store.
+lead: Tabliss has officially launched on the Microsoft Edge addon store.
 ---
 
-First-class support has now arrived for Microsoft Edge browser, you no longer
-need to install Tabliss through the Chrome Webstore.
+First-class support has arrived for the Microsoft Edge browser, you no longer
+need to install the Tabliss extension through the Chrome Web Store.
 
 If you have already been enjoying Tabliss on Edge, consider adding a review to
 spread the word.
